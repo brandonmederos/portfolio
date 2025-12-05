@@ -13,8 +13,8 @@ export const SITE = {
   showBackButton: true, // show back button in post detail
   editPost: {
     enabled: false,
-    // text: "Edit page",
-    // url: "https://github.com/satnaing/astro-paper/edit/main/",
+    text: "Edit page",
+    url: "https://github.com/brandonmederos/portfolio/edit/main/",
   },
   dynamicOgImage: false,
   dir: "ltr", // "rtl" | "auto"

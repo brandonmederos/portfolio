@@ -8,6 +8,7 @@ import IconSunHigh from "@/assets/icons/IconSunHigh.svg";
 import IconMenuDeep from "@/assets/icons/IconMenuDeep.svg";
 import LinkButton from "./LinkButton.astro";
 import { SITE } from "@/config";
+import BgmLogo from "public/assets/bgm-logo.svg";
 
 const { pathname } = Astro.url;
 
@@ -43,6 +44,7 @@ const isActive = (path: string) => {
         href="/"
         class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
       >
+        <BgmLogo class="h-8 w-8 sm:h-10 sm:w-10 dark:invert" />
         {SITE.title}
       </a>
       <nav
@@ -69,21 +71,35 @@ const isActive = (path: string) => {
           ]}
         >
           <li class="col-span-2">
-            <a href="/posts" class:list={{ "active-nav": isActive("/posts") }}>
-              Posts
-            </a>
-          </li>
-          <li class="col-span-2">
-            <a href="/tags" class:list={{ "active-nav": isActive("/tags") }}>
-              Tags
-            </a>
-          </li>
-          <li class="col-span-2">
             <a href="/about" class:list={{ "active-nav": isActive("/about") }}>
               About
             </a>
           </li>
-          {
+          <li class="col-span-2">
+            <a
+              href="/systems"
+              class:list={{ "active-nav": isActive("/systems") }}
+            >
+              Systems
+            </a>
+          </li>
+          <li class="col-span-2">
+            <a
+              href="/projects"
+              class:list={{ "active-nav": isActive("/projects") }}
+            >
+              Projects
+            </a>
+          </li>
+          <li class="col-span-2">
+            <a
+              href="/timeline"
+              class:list={{ "active-nav": isActive("/timeline") }}
+            >
+              Timeline
+            </a>
+          </li>
+          <!-- {
             SITE.showArchives && (
               <li class="col-span-2">
                 <LinkButton
@@ -102,21 +118,7 @@ const isActive = (path: string) => {
                 </LinkButton>
               </li>
             )
-          }
-          <li class="col-span-1 flex items-center justify-center">
-            <LinkButton
-              href="/search"
-              class:list={[
-                "focus-outline flex p-3 sm:p-1",
-                { "[&>svg]:stroke-accent": isActive("/search") },
-              ]}
-              ariaLabel="search"
-              title="Search"
-            >
-              <IconSearch />
-              <span class="sr-only">Search</span>
-            </LinkButton>
-          </li>
+          } -->
           {
             SITE.lightAndDarkMode && (
               <li class="col-span-1 flex items-center justify-center">

@@ -13,7 +13,7 @@ import { SITE } from "./src/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://wwwbrandonmederos.com",
+  site: "https://brandonmederos.com",
   base: "/",
   integrations: [
     sitemap({

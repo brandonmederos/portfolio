@@ -8,6 +8,15 @@ image:
 
 ![Brandon Banner](/brandon_banner.jpeg)
 
+<div class="w-full flex justify-center my-6">
+  <a 
+    href="/brandonmederoscv.pdf" 
+    class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl shadow-lg text-lg font-semibold transition-all"
+  >
+    📄 Download CV
+  </a>
+</div>
+
 ## Leading Through Discipline, Service & Continuous Improvement
 
 My name is **Brandon Mederos**, and my life has been shaped by two parallel paths:  

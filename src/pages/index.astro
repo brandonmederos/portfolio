@@ -6,51 +6,50 @@ import Socials from "@/components/Socials.astro";
 import Hr from "@/components/Hr.astro";
 import { SOCIALS } from "@/constants";
 
-// 👇 import your logo from public
 import BgmLogo from "public/assets/bgm-logo.svg";
-
-// const posts = await getCollection("blog");
-
-// const sortedPosts = getSortedPosts(posts);
-// const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-// const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 ---
 
 <Layout>
   <Header />
+
   <main id="main-content" data-layout="index">
     <!-- HERO / LANDING -->
     <section id="hero" class="pt-8 pb-6">
       <div class="flex items-center justify-between gap-4">
+        <!-- LEFT SIDE -->
         <div class="space-y-4">
-          <h1 class="text-4xl font-bold sm:text-5xl">
+          <h1 class="text-4xl font-bold text-foreground sm:text-5xl">
             Life of Brandon Mederos
           </h1>
-          <p class="max-w-xl text-base text-slate-300 sm:text-lg">
+
+          <p class="text-muted-foreground max-w-xl text-base sm:text-lg">
             Computer Science graduate, martial arts instructor, and
             systems-driven leader focused on building structure, clarity, and
             growth in every environment I work in.
           </p>
 
+          <!-- BUTTONS -->
           <div class="flex flex-wrap gap-3 pt-2">
             <a
               href="/about"
-              class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+              class="inline-flex items-center justify-center rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-background transition-colors hover:bg-accent/90"
             >
               Learn more about me
             </a>
+
             <a
               href="/projects"
-              class="inline-flex items-center justify-center rounded-lg border border-slate-600 px-5 py-2.5 text-sm font-semibold text-slate-100 transition-colors hover:border-slate-400"
+              class="inline-flex items-center justify-center rounded-lg border border-border px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-accent"
             >
               View technical projects
             </a>
           </div>
 
+          <!-- SOCIAL LINKS -->
           {
             SOCIALS.length > 0 && (
               <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
-                <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">
+                <div class="me-2 mb-1 whitespace-nowrap text-foreground sm:mb-0">
                   Social Links:
                 </div>
                 <Socials />
@@ -59,7 +58,7 @@ import BgmLogo from "public/assets/bgm-logo.svg";
           }
         </div>
 
-        <!-- logo + rss on the right (hidden on small screens if you want) -->
+        <!-- RIGHT-SIDE LOGO -->
         <div class="hidden flex-col items-end gap-4 sm:flex">
           <BgmLogo class="h-16 w-16 sm:h-20 sm:w-20 dark:invert" />
         </div>
@@ -70,66 +69,79 @@ import BgmLogo from "public/assets/bgm-logo.svg";
 
     <!-- QUICK LINKS GRID -->
     <section class="space-y-4 pt-8 pb-4">
-      <h2 class="text-2xl font-semibold tracking-wide">Quick links</h2>
+      <h2 class="text-2xl font-semibold tracking-wide text-foreground">
+        Quick links
+      </h2>
+
       <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- ABOUT CARD -->
         <a
           href="/about"
-          class="block rounded-lg border border-slate-700 p-4 transition hover:border-orange-400 hover:bg-slate-800/40"
+          class="block rounded-lg border border-border p-4 transition hover:border-accent hover:bg-muted/50"
         >
-          <h3 class="text-base font-semibold">About</h3>
-          <p class="mt-1 text-sm text-slate-300">
+          <h3 class="text-base font-semibold text-foreground">About</h3>
+          <p class="text-muted-foreground mt-1 text-sm">
             Background, values, and how I lead.
           </p>
         </a>
 
+        <!-- SYSTEMS CARD -->
         <a
           href="/systems"
-          class="block rounded-lg border border-slate-700 p-4 transition hover:border-orange-400 hover:bg-slate-800/40"
+          class="block rounded-lg border border-border p-4 transition hover:border-accent hover:bg-muted/50"
         >
-          <h3 class="text-base font-semibold">Systems &amp; Documentation</h3>
-          <p class="mt-1 text-sm text-slate-300">
+          <h3 class="text-base font-semibold text-foreground">
+            Systems &amp; Documentation
+          </h3>
+          <p class="text-muted-foreground mt-1 text-sm">
             Curriculum manual, X / ✓ / ? system, and organization frameworks.
           </p>
         </a>
 
+        <!-- PROJECTS CARD -->
         <a
           href="/projects"
-          class="block rounded-lg border border-slate-700 p-4 transition hover:border-orange-400 hover:bg-slate-800/40"
+          class="block rounded-lg border border-border p-4 transition hover:border-accent hover:bg-muted/50"
         >
-          <h3 class="text-base font-semibold">Projects</h3>
-          <p class="mt-1 text-sm text-slate-300">
+          <h3 class="text-base font-semibold text-foreground">Projects</h3>
+          <p class="text-muted-foreground mt-1 text-sm">
             Java mini-games, portfolio, and technical experiments.
           </p>
         </a>
 
+        <!-- TIMELINE CARD -->
         <a
           href="/timeline"
-          class="block rounded-lg border border-slate-700 p-4 transition hover:border-orange-400 hover:bg-slate-800/40"
+          class="block rounded-lg border border-border p-4 transition hover:border-accent hover:bg-muted/50"
         >
-          <h3 class="text-base font-semibold">Timeline</h3>
-          <p class="mt-1 text-sm text-slate-300">
+          <h3 class="text-base font-semibold text-foreground">Timeline</h3>
+          <p class="text-muted-foreground mt-1 text-sm">
             Key milestones in my martial arts and tech journey.
           </p>
         </a>
 
+        <!-- CURRICULUM CARD -->
         <a
           href="/systems#download"
-          class="block rounded-lg border border-slate-700 p-4 transition hover:border-orange-400 hover:bg-slate-800/40"
+          class="block rounded-lg border border-border p-4 transition hover:border-accent hover:bg-muted/50"
         >
-          <h3 class="text-base font-semibold">Curriculum Manual</h3>
-          <p class="mt-1 text-sm text-slate-300">
+          <h3 class="text-base font-semibold text-foreground">
+            Curriculum Manual
+          </h3>
+          <p class="text-muted-foreground mt-1 text-sm">
             Downloadable rank requirement reference.
           </p>
         </a>
 
+        <!-- INSTAGRAM CARD -->
         <a
           href="https://instagram.com/brandonmederos"
           target="_blank"
           rel="noreferrer"
-          class="block rounded-lg border border-slate-700 p-4 transition hover:border-orange-400 hover:bg-slate-800/40"
+          class="block rounded-lg border border-border p-4 transition hover:border-accent hover:bg-muted/50"
         >
-          <h3 class="text-base font-semibold">Instagram</h3>
-          <p class="mt-1 text-sm text-slate-300">
+          <h3 class="text-base font-semibold text-foreground">Instagram</h3>
+          <p class="text-muted-foreground mt-1 text-sm">
             Training clips, teaching moments, and updates.
           </p>
         </a>
@@ -139,6 +151,7 @@ import BgmLogo from "public/assets/bgm-logo.svg";
     <Hr />
   </main>
 </Layout>
+
 <Footer />
 
 <script>

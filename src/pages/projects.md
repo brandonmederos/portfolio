@@ -12,12 +12,12 @@ Over time, I’ll link each project to a dedicated page or write-up and include 
 
 ---
 
-## Java Mini-Game Collection (AP Computer Science)
+## Java Mini-Game Collection
 
 **Tech:** Java, OOP, basic data structures  
 **Type:** Small weekly projects / mini-games
 
-A collection of tiny Java games built during AP Computer Science to practice core concepts in a fun, applied way. Each mini-project focused on a specific idea:
+A collection of tiny Java games built during to practice core concepts in a fun, applied way. Each mini-project focused on a specific idea:
 
 - Game loops, input handling, and basic control flow
 - Using classes and objects to separate game logic

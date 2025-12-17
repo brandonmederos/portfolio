@@ -26,7 +26,7 @@ A collection of tiny Java games built during to practice core concepts in a fun,
 
 <!-- Replace # with the actual repo link when ready -->
 
-[View on GitHub](https://github.com/brandonmederos/APCS2020)
+[View on GitHub](https://github.com/brandonmederos/Java-2020)
 
 ---
 
@@ -44,7 +44,7 @@ This portfolio is more than a static page—it’s a living space to present my 
 
 <!-- Replace # with the actual repo link when ready -->
 
-[View source on GitHub](https://github.com/brandonmederos/portfolio)
+[View source on GitHub](https://github.com/brandonmederos/brandonmederos.github.io)
 
 ---
 
